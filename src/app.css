@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-jasmine: #F8DE7E;
+  --color-jasmine-light: #FDF6DC;
+  --color-jasmine-dark: #E8C84E;
+  --color-champagne: #F7E6CA;
+  --color-ivory: #FFFDF5;
+  --color-cream: #FFF9E8;
+  --color-surface: #FFFBEF;
+  --color-surface-hover: #FFF5D6;
+  --color-bark: #2C2416;
+  --color-bark-muted: #6B5D4B;
+  --color-bark-light: #9A8C7A;
+  --color-success: #5CB85C;
+  --color-success-light: #DFF5DF;
+  --color-warning: #E8A817;
+  --color-warning-light: #FFF3D0;
+  --color-danger: #E85D3A;
+  --color-danger-light: #FDEDE8;
+  --color-info: #5B8DEF;
+  --color-info-light: #E8F0FD;
+  --color-accent: #D4A843;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-bark);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, select, input, textarea {
+  font-size: 16px;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bark-light);
+  border-radius: 3px;
+}
+
+/* High-contrast focus ring — extra thick for visibility (MS / low vision) */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="checkbox"]:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible,
+[data-focus-visible] {
+  outline: 4px solid var(--color-bark);
+  outline-offset: 4px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px var(--color-jasmine);
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(44, 36, 22, 0.08);
+}
